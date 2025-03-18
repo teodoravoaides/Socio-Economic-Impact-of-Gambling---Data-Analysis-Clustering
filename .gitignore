@@ -111,7 +111,7 @@ cluster_summary_filtered <- data_filtered %>%
   group_by(new_cluster) %>%
   summarise(across(everything(), list(mean = mean, sd = sd)))
 print(cluster_summary_filtered)
-# Presupunând că ai deja data_filtered care conține clusterele 2 și 3
+# Data_filtered care conține clusterele 2 și 3
 write.csv(data_filtered, file = "mda_filtered.csv", row.names = FALSE)
 getwd()
 
